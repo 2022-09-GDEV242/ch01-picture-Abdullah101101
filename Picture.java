@@ -1,13 +1,9 @@
 /**
- * This class represents a simple picture. You can draw the picture using
- * the draw method. But wait, there's more: being an electronic picture, it
- * can be changed. You can set it to black-and-white display and back to
- * colors (only after it's been drawn, of course).
- *
- * This class was written as an early example for teaching Java with BlueJ.
+ * This image depicts a terrible ice cream incident on a beautiful sunny
+ * day.
  * 
  * @author  Abdullah Abdulwahab
- * @version 2022.09.08
+ * @version 2022.09.09
  */
 public class Picture
 {
@@ -25,11 +21,11 @@ public class Picture
      */
     public Picture()
     {
-        iceCreamLover = new Person();
         ground = new Square();
         sky = new Square();
+        iceCreamLover = new Person();
         iceCreamCone = new Triangle(); 
-        iceCream1 = new Cricle();
+        iceCream1 = new Circle();
         iceCream2 = new Circle();
         sun = new Circle();
         drawn = false;
@@ -41,27 +37,48 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
-            wall.moveHorizontal(-140);
-            wall.moveVertical(20);
-            wall.changeSize(120);
-            wall.makeVisible();
+            ground.changeColor("dark gray");
+            ground.moveHorizontal(-320);
+            ground.changeSize(550);
+            ground.makeVisible();
             
-            window.changeColor("black");
-            window.moveHorizontal(-120);
-            window.moveVertical(40);
-            window.changeSize(40);
-            window.makeVisible();
-    
-            roof.changeSize(60, 180);
-            roof.moveHorizontal(20);
-            roof.moveVertical(-60);
-            roof.makeVisible();
+            sky.changeColor("skyblue");
+            sky.moveHorizontal(-340);
+            sky.moveVertical(-410);
+            sky.changeSize(550);
+            sky.makeVisible();
+            
+            iceCreamLover.changeColor("black");
+            iceCreamLover.changeSize(150,75);
+            iceCreamLover.moveHorizontal(-105);
+            iceCreamLover.moveVertical(-10);
+            iceCreamLover.makeVisible();
+            
+            iceCream1.changeColor("magenta");
+            iceCream1.moveHorizontal(-17);
+            iceCream1.moveVertical(150);
+            iceCream1.changeSize(40);
+            iceCream1.makeVisible();
+            
+            iceCream2.changeColor("yellow");
+            iceCream2.moveHorizontal(-18);
+            iceCream2.moveVertical(170);
+            iceCream2.changeSize(50);
+            iceCream2.makeVisible();
+             
+            iceCreamCone.changeColor("beige");
+            iceCreamCone.changeSize(50, 35);
+            iceCreamCone.moveHorizontal(22);
+            iceCreamCone.moveVertical(55);
+            iceCreamCone.makeVisible();
     
             sun.changeColor("yellow");
-            sun.moveHorizontal(100);
-            sun.moveVertical(-40);
+            sun.moveHorizontal(203);
+            sun.moveVertical(-100);
             sun.changeSize(80);
             sun.makeVisible();
+            
+            
             drawn = true;
         }
     }
@@ -71,9 +88,12 @@ public class Picture
      */
     public void setBlackAndWhite()
     {
-        wall.changeColor("black");
-        window.changeColor("white");
-        roof.changeColor("black");
+        ground.changeColor("black");
+        sky.changeColor("white");
+        iceCreamCone.changeColor("black");
+        iceCream1.changeColor("black");
+        iceCream2.changeColor("white");
+        iceCreamLover.changeColor("black");
         sun.changeColor("black");
     }
 
@@ -82,9 +102,12 @@ public class Picture
      */
     public void setColor()
     {
-        wall.changeColor("red");
-        window.changeColor("black");
-        roof.changeColor("green");
+        ground.changeColor("dark gray");
+        sky.changeColor("skyblue");
+        iceCreamCone.changeColor("biege");
+        iceCream1.changeColor("magenta");
+        iceCream2.changeColor("yellow");
+        iceCreamLover.changeColor("black");
         sun.changeColor("yellow");
     }
 }
