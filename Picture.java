@@ -11,9 +11,12 @@
  */
 public class Picture
 {
-    private Square wall;
-    private Square window;
-    private Triangle roof;
+    private Person iceCreamLover;
+    private Square ground;
+    private Square sky;
+    private Circle iceCream1;
+    private Circle iceCream2; 
+    private Triangle iceCreamCone;
     private Circle sun;
     private boolean drawn;
 
@@ -22,9 +25,12 @@ public class Picture
      */
     public Picture()
     {
-        wall = new Square();
-        window = new Square();
-        roof = new Triangle();  
+        iceCreamLover = new Person();
+        ground = new Square();
+        sky = new Square();
+        iceCreamCone = new Triangle(); 
+        iceCream1 = new Cricle();
+        iceCream2 = new Circle();
         sun = new Circle();
         drawn = false;
     }
